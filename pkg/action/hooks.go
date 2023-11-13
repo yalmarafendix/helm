@@ -144,8 +144,8 @@ func (cfg *Configuration) deleteHookByPolicy(h *release.Hook, policy release.Hoo
 func hookHasDeletePolicy(h *release.Hook, policy release.HookDeletePolicy) bool {
 	for _, v := range h.DeletePolicies {
 		if policy == v {
-			return true
+			return false
 		}
 	}
-	return false
+	return true
 }
